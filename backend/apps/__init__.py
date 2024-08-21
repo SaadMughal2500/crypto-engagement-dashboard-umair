@@ -36,6 +36,8 @@ def configure_database(app):
         app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'db.sqlite3')
 
         print('> Fallback to SQLite ')
+        db.create_all()
+
 
 
 
